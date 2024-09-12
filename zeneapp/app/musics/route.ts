@@ -1,5 +1,5 @@
 type Music = {
-    _id: string
+    pId: string
     name: string
     img: string
     trackUrl: string
@@ -12,7 +12,7 @@ export async function GET() {
         return Response.json(response.statusText)
     }
 
-    const data: Music[] = await response.json()
+    const data = await response.json()
 
-    return Response.json(data)
+    return Response.json(data as Music[])
 }

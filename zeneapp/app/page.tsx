@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="h-[calc(100vh-5rem)] ml-5">
+    <main className="min-h-[calc(100vh-5rem)] mx-5">
         <div className="inline-flex gap-2 my-5 h-9 items-center justify-center rounded-lg bg-zinc-800 p-1">
             <Link href="/" className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background bg-black transition-all hover:bg-zinc-600">Zene</Link>
             <button disabled={true} className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background text-gray-400 cursor-not-allowed">Podcast</button>
@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className="text-2xl font-semibold">Hallgasd Most</h1>
         <p className="text-sm text-gray-500 mt-1">Top listás zenék csak neked. Naponta frissül.</p>
         <div className="shrink-0 bg-gray-600 h-[1px] w-1/2 my-4"></div>
-        <section className="w-full overflow-x-scroll">
+        <section className="w-full h-full overflow-x-scroll">
             <div className="min-w-full table">
                 <div className="flex space-x-4 pb-4">
                     <MusicTable />
