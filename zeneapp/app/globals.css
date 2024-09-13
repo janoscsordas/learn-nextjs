@@ -6,4 +6,17 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .scrollbar::-webkit-scrollbar {
+    height: 12px; /* Custom height for horizontal scrollbars */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(75, 85, 99, 0.5); /* Tailwind gray-500 */
+    border-radius: 6px;
+  }
+}
+
+.backBtn {
+    @apply absolute top-5 left-5 flex gap-2 border border-gray-500 rounded-lg p-2 hover:-translate-y-1 hover:-translate-x-1 transition-all
 }

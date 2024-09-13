@@ -13,9 +13,9 @@ export default function Home() {
         <h1 className="text-2xl font-semibold">Hallgasd Most</h1>
         <p className="text-sm text-gray-500 mt-1">Top listás zenék csak neked. Naponta frissül.</p>
         <div className="shrink-0 bg-gray-600 h-[1px] w-1/2 my-4"></div>
-        <section className="w-full h-full overflow-x-scroll">
-            <div className="min-w-full table">
-                <div className="flex space-x-4 pb-4">
+        <section className="w-full h-full scrollbar-thin scrollbar-thumb-gray-500">
+            <div className="w-full table">
+                <div className="grid gap-y-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 space-x-4 pb-4">
                     <MusicTable />
                 </div>
             </div>

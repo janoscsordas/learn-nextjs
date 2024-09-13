@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 
-type Music = {
+export type Music = {
     pId: string
     name: string
     img: string
     trackUrl: string
+    score: number
 }
 
 async function getMusicData() {
@@ -28,13 +29,13 @@ export default async function MusicTable() {
     }
 
     return musicData && musicData.map((music) => (
-        <Link href={`/music/${music.pId}`} key={music.pId} className="space-y-3 w-[250px] group select-none">
+        <Link href={`/music?id=${music.pId}`} key={music.pId} className="ml-5 space-y-3 w-[250px] group select-none self-center">
             <div className="">
                 <div className="overflow-hidden">
-                    <img src={music.img} alt={music.name} loading="lazy" width={250} className="block mx-auto group-hover:scale-110 transition-transform duration-100" />
+                    <img src={music.img} alt={music.name} loading="lazy" className="block mx-auto group-hover:scale-110 transition-transform duration-100" />
                 </div>
-                <p className="mt-2 text-sm">{music.name.split(" - ")[1]}</p>
-                <p className="text-[.8rem] text-gray-500">{music.name.split(" - ")[0]}</p>
+                <p className="mt-2 text-sm text-center">{music.name.split(" - ")[1]}</p>
+                <p className="text-[.8rem] text-gray-500 text-center">{music.name.split(" - ")[0]}</p>
             </div>
         </Link>
     ))
